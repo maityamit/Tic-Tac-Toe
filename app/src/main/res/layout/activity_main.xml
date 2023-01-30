@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4FAFF"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playervsplayer"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ripple_blue"
+        android:padding="10dp"
+        android:drawablePadding="15dp"
+        android:drawableStart="@drawable/ic_baseline_people_24"
+        android:text="Player v/s Player"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playervscomputer"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ripple_blue"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:drawablePadding="15dp"
+        android:drawableStart="@drawable/ic_baseline_computer_24"
+        android:text="Player v/s Computer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/playervsmultiplier"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:alpha="0.5"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ripple_blue"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:enabled="false"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/ic_baseline_wifi_tethering_24"
+            android:text="Online Player"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
