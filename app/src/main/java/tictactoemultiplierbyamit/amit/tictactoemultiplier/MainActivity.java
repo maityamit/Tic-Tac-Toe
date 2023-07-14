@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.playervscomputer);
         dialog.getWindow().setBackgroundDrawable(MainActivity.this.getDrawable(R.drawable.custom_dialog_background));
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.setCancelable(false); //Optional
+        dialog.setCancelable(true); //Optional
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation; //Setting the animations to dialog
 
         EditText editText = dialog.findViewById(R.id.user_name);
@@ -100,7 +101,19 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("UserOne",st1);
                 intent.putExtra("UserTwo",st2);
                 intent.putExtra("Computer",false);
-                startActivity(intent);
+
+                if (st1.equals("") && st2.equals("")){
+                    Toast.makeText(MainActivity.this, "Enter Player Name", Toast.LENGTH_SHORT).show();
+                }
+                else if (st1.equals("")){
+                    Toast.makeText(MainActivity.this, "Enter Player Name 1", Toast.LENGTH_SHORT).show();
+                }
+                else if (st2.equals("")){
+                    Toast.makeText(MainActivity.this, "Enter Player Name 2", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(intent);
+                }
 
             }
         });
